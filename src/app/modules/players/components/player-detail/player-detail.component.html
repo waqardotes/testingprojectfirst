@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h4>{{player.fullName}}</h4>
+            <button class="btn bg-primary py-0 text-white" (click)="toggleDetails(player)"> {{player.details? 'This Details' : 'Details'}}</button>
+        </div>
+        <div class="col-6">
+            <div *ngIf="show">
+                <p><strong>BORN :</strong> {{player.born}}  </p>
+                <p><strong>AGE :</strong> {{player.age}}  </p>
+                <p><strong>BATTING STYLE :</strong> {{player.battingStyle}} </p>
+                <p><strong>BOWLING STYLE :</strong> {{player.bowlingStyle}} </p>
+                <p><strong>PLAYING STYLE :</strong> {{player.playingRole}} </p>
+            </div>            
+        </div>
+    </div>
+</div>

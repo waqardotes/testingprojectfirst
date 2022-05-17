@@ -1,0 +1,16 @@
+<div class="container-box">
+    <div class="box links-box">
+        <ul>
+            <li><a routerLink="product1" routerLinkActive="active">Product 1</a></li>
+            <li><a routerLink="product2" routerLinkActive="active">Product 2</a></li>
+            <li><a routerLink="product3" routerLinkActive="active">Product 3</a></li>
+        </ul>
+        <br><br>
+        <input type="text" (keyup.enter)="passValue($event)" #item>
+        
+    </div>
+    <div class="box links-box-view">
+        <app-product1 [name]="data" router-outlet> </app-product1>
+        <router-outlet></router-outlet>
+    </div>
+</div>

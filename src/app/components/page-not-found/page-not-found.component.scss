@@ -1,0 +1,39 @@
+.page-not-found {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    h1 {
+        font-size: 9rem;
+        color: #0000005c;
+        margin:28px 0;
+    }
+    h2 {
+        font-size: 26px;
+        margin: 0px 0;
+        font-family: system-ui;
+    }
+    span {
+        width: 55%;
+        display: inline-block;
+        p {
+            color: #726f6f;
+            font-family: system-ui;
+        }
+        button:hover {
+            background-color: white;
+            color: #0000ffb5;
+            transition: 1s;
+            font-weight: 600;
+        }
+        button {
+            background-color: #0000ffb5;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            padding: 6px 15px;
+            cursor: pointer;
+            box-shadow: -1px 0px 8px 0px #a3a3a3;
+        }
+    }
+}

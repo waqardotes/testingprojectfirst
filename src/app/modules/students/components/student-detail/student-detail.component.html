@@ -1,0 +1,15 @@
+<div>
+    {{student.favourite ? 'F -' : ''}}
+    {{student.blacklist ? 'B -' : ''}}
+    {{student.firstName}} {{student.lastName | lowercase}}
+    <span *ngIf="controls">
+        <!-- <button (click)="favourite(student)">favourite</button> -->
+        <button class="btn bg-primary text-white" (click)="toggleFavourite(student)">
+            {{student.favourite ? 'Unfavourite' : 'Favourite'}}
+        </button>
+
+        <button class="btn bg-dark text-white" (click)="toggleBlacklist(student)">
+            {{student.blacklist ? 'Unblacklist' : 'blacklist'}}
+        </button>
+    </span>
+</div>

@@ -1,0 +1,43 @@
+<h2>
+    Students List
+    <ul class="stats">
+        <li>favourites: {{favouritesLength}}</li>
+        <li>BlackListed: {{blacklistslength}}</li>
+    </ul>
+</h2>
+<ul>
+    <li *ngFor="let item of students">
+        <!-- {{item.firstName}} {{item.lastName | lowercase}} -->
+
+        <app-student-detail 
+            [student]="item"
+            [controls]="true"
+            (onFavourite)="onFavourite($event)"
+            (onFavouriteUpdate)="onFavouriteUpdate()"
+            (onBlacklist)="onBlacklist($event)"
+            (onBlacklistUpdate)="onBlacklistUpdate()"
+        ></app-student-detail>
+    </li>
+
+    <hr>
+    
+    <li *ngFor="let item of students2">
+        <!-- {{item.firstName}} {{item.lastName | lowercase}} -->
+
+        <app-student-detail 
+            [student]="item"
+        ></app-student-detail>
+    </li>
+
+    <hr>
+
+    <li *ngFor="let item of students3">
+        <app-student-detail 
+            [student]="item"
+            [controls]="true"
+            (onFavourite)="onFavourite($event)"
+            (onFavouriteUpdate)="onFavouriteUpdate()"
+            (onBlacklist)="onBlacklist($event)"
+        ></app-student-detail>
+    </li>
+</ul>

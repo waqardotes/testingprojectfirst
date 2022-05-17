@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="display-4">Pakistan Contracted Players {{playerName}}</h1>
+    <ul>
+        <li *ngFor="let info of players">
+            <app-player-detail 
+            [player]="info"
+            (onFavourite)="onFavourite()"
+            ></app-player-detail>
+        </li>
+        <!-- <li *ngFor="let name of goldenNames">
+            {{name}}
+        </li> -->
+        <!-- <li *ngFor="let name of webStudent">
+            {{name}}
+        </li> -->   
+        <!-- <li *ngFor="let item of todo">
+            {{item.id}} {{item.title}}
+        </li> -->
+    </ul>
+    
+</div>
+
+  
